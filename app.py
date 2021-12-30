@@ -9,8 +9,8 @@ def get_bot_response():
     if request.method == 'POST':
         post_sentence = request.get_json()['content']
         print(post_sentence)
+        time.sleep(2)
         confidence_sentence = request_sentence(post_sentence)
-        time.sleep(1)
         return confidence_sentence
 
 

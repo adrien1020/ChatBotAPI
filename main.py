@@ -71,4 +71,3 @@ data = {
 
 File = "data.pth"
 torch.save(data, File)
-

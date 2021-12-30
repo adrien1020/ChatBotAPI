@@ -188,7 +188,7 @@
     {
       "tag": "cost_lowering",
       "patterns": [
-        "Cost Lowering changes to be made?",
+        "i ",
         "what changes could lower cost?"
       ],
       "responses": [

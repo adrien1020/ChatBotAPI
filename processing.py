@@ -1,3 +1,4 @@
+import datetime
 import random
 import json
 import torch
@@ -5,6 +6,7 @@ from model import NeuralNetwork
 import nltk
 from nltk.stem import PorterStemmer
 import numpy as np
+from datetime import datetime
 
 
 def request_sentence(sentence):
@@ -46,10 +48,16 @@ def request_sentence(sentence):
     if confidence > 0.75:
         for intent in intents['intents']:
             if tag == intent['tag']:
-                return json.dumps({'username': f'{bot_name}',
-                'content': random.choice(intent["responses"]),
-                'isCurrentUser': False})
+                dict = {
+                        'username': f'{bot_name}',
+                        'content': random.choice(intent["responses"]),
+                        'isCurrentUser': False
+                }
+                j = json.dumps(dict)
+                print(j)
+                return j
     else:
-        return json.dumps({'username': f'{bot_name}',
+        return json.dumps({'id': datetime,
+                            'username': f'{bot_name}',
                            'content': "I don't Understand",
                            'isCurrentUser': False})
