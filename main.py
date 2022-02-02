@@ -18,7 +18,7 @@ if not os.path.exists('/Users/adriensurugue/nltk_data'):
     nltk.download("punkt")
 
 preprocessing = PreProcessing()
-preprocessing.load_json('intents_data_source.json')
+preprocessing.load_json('data_source.json')
 preprocessing.tokenization()
 preprocessing.stem_and_clean_data()
 preprocessing.bag_of_word()

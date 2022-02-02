@@ -8,6 +8,7 @@
         "Bonjour",
         "Salut",
         "Hey",
+        "Hi",
         "Hola",
         "Bienvenue",
         "Good day"
@@ -18,7 +19,7 @@
         "Hi there, how can I help?"
       ],
       "context": [
-        ""
+        "https://www.netflix.com/browse"
       ]
     },
     {
@@ -36,7 +37,7 @@
         "Bye! Come back again soon."
       ],
       "context": [
-        ""
+        "https://www.apple.com/fr/"
       ]
     },
     {

@@ -1,6 +1,7 @@
+import time
+
 from flask import Flask, request
 from processing import request_sentence
-import time
 app = Flask(__name__)
 
 
@@ -15,4 +16,5 @@ def get_bot_response():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.debug = True
+    app.run(host='0.0.0.0')

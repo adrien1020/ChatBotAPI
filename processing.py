@@ -6,14 +6,13 @@ from model import NeuralNetwork
 import nltk
 from nltk.stem import PorterStemmer
 import numpy as np
-from datetime import datetime
 
 
 def request_sentence(sentence):
     bot_name = "robot"
     stemmer = PorterStemmer()
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    with open('intents_data_source.json', 'r') as json_file:
+    with open('data_source.json', 'r') as json_file:
         intents = json.load(json_file)
     FILE = 'data.pth'
     data = torch.load(FILE)
@@ -43,21 +42,31 @@ def request_sentence(sentence):
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
     confidence = prob.item()
+    print(tag)
     print(f'Confidence={confidence}')
 
     if confidence > 0.75:
         for intent in intents['intents']:
             if tag == intent['tag']:
-                dict = {
+                bot_response = {
                         'username': f'{bot_name}',
                         'content': random.choice(intent["responses"]),
-                        'isCurrentUser': False
+                        'isCurrentUser': False,
+                        'urlLink': intent['context'][0]
                 }
-                j = json.dumps(dict)
-                print(j)
-                return j
+                json_response = json.dumps(bot_response)
+                print(json_response)
+                return json_response
     else:
-        return json.dumps({'id': datetime,
-                            'username': f'{bot_name}',
-                           'content': "I don't Understand",
-                           'isCurrentUser': False})
+        bot_response = {
+                'username': f'{bot_name}',
+                'content': 'Je ne comprend pas',
+                'isCurrentUser': False,
+
+        }
+        json_response = json.dumps(bot_response)
+        print(json_response)
+        return json_response
+
+
+
