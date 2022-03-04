@@ -39,7 +39,7 @@ Send message with POST Method
 
 ![alt text](https://res.cloudinary.com/dhdgnx4mc/image/upload/v1646432443/media/GitHub/gm3v2ifjr3ee8gbsp45y.png)
 
-you can train the questions you want by updating the ```intents_data_source.json``` and make sure you run 
+you can train the intents you want by updating the ```intents_data_source.json``` and make sure you run 
 ```main.py``` after the update
 
 ## Contributing
