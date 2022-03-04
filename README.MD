@@ -1,6 +1,7 @@
 # CHATBOT API
 
-These are based on NLP. Natural language processing for chatbot makes such bots very human-like. They react to the meaning of the whole question. The AI-based chatbot can learn from every interaction and expand their knowledge.sing scrapping (free API).<br>
+These are based on NLP. Natural language processing for chatbot makes such bots very human-like. 
+They react to the meaning of the whole question. The AI-based chatbot can learn from every interaction and expand their knowledge.<br>
 
 ## Installation
 
@@ -15,7 +16,10 @@ Create a file ```.env``` with "nltk_data" location path.
 example: ```NLTK_PATH=/Users/yourusername/nltk_data```
 if this file does not exist it will be created
 ## Information
-NLTK is a leading platform for building Python programs to work with human language data. It provides easy-to-use interfaces to over 50 corpora and lexical resources such as WordNet, along with a suite of text processing libraries for classification, tokenization, stemming, tagging, parsing, and semantic reasoning, wrappers for industrial-strength NLP libraries, and an active discussion forum.
+NLTK is a leading platform for building Python programs to work with human language data. 
+It provides easy-to-use interfaces to over 50 corpora and lexical resources such as WordNet, 
+along with a suite of text processing libraries for classification, tokenization, stemming, tagging, parsing, 
+and semantic reasoning, wrappers for industrial-strength NLP libraries, and an active discussion forum.
 
 ## Usage
 
