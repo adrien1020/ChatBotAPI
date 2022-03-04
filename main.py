@@ -3,12 +3,14 @@ import torch.nn as nn
 from preprocessing import PreProcessing
 from torch.utils.data import DataLoader
 from chat_dataset import ChatDataSet
+from dotenv import load_dotenv
 from model import NeuralNetwork
 import os.path
 import ssl
 import nltk
 
-if not os.path.exists('/Users/adriensurugue/nltk_data'):
+load_dotenv = load_dotenv()
+if not os.path.exists(os.getenv('NLTK_PATH')):
     try:
         _create_unverified_https_context = ssl._create_unverified_context
     except AttributeError:
@@ -18,7 +20,7 @@ if not os.path.exists('/Users/adriensurugue/nltk_data'):
     nltk.download("punkt")
 
 preprocessing = PreProcessing()
-preprocessing.load_json('data_source.json')
+preprocessing.load_json('intents_data_source.json')
 preprocessing.tokenization()
 preprocessing.stem_and_clean_data()
 preprocessing.bag_of_word()

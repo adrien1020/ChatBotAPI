@@ -27,3 +27,7 @@ instance/*
 !instance/.gitignore
 .webassets-cache
 .env
+
+### File ###
+data.pth
+data_source.json

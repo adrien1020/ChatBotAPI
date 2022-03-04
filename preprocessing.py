@@ -7,7 +7,7 @@ import numpy as np
 class PreProcessing(object):
     def __init__(self):
         self.stemmer = PorterStemmer()
-        self.ignore_word = ['?', ' ', '!', ',', ';', '.', ':', '/', '#', '@',"'"]
+        self.ignore_word = ['?', ' ', '!', ',', ';', '.', ':', '/', '#', '@', "'"]
         self.intents = []
         self.all_words = []
         self.tags = []
