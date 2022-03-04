@@ -11,7 +11,7 @@ def request_sentence(sentence):
     bot_name = "robot"
     stemmer = PorterStemmer()
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    with open('data_source.json', 'r') as json_file:
+    with open('intents_data_source.json', 'r') as json_file:
         intents = json.load(json_file)
     FILE = 'data.pth'
     data = torch.load(FILE)
