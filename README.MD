@@ -33,6 +33,10 @@ Run ```main.py``` to start machine learning preprocessing from the ```intents_da
 Now we can start Flask server ```app.py```
 
 ```python
+from flask import Flask
+
+app = Flask(__name__)
+
 if __name__ == '__main__':
     app.debug = True
     app.run(host='0.0.0.0')
